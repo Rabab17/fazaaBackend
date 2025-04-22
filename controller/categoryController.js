@@ -1,7 +1,3 @@
-const express = require('express')
-
-const router = express.Router()
-
 const categorylistModel = require('../model/categoryModel');
 
 const APIERROR = require("../utils/apiError");
@@ -10,7 +6,7 @@ const APIERROR = require("../utils/apiError");
 getCategory = async (req, res, next) => {
 
     try {
-        let category = await categorylistModel.find().populate({ path: "products" })
+        let category = await categorylistModel.find()
         res.status(200).json({ status: 'success', data: category })
     } catch (err) {
         return next(new APIERROR(400, err.message))
@@ -36,7 +32,7 @@ saveCategory = async (req, res, next) => {
 getCategoryById = async (req, res, next) => {
     let { id } = req.params
 
-    let getCategory = await categorylistModel.findById(id).populate({ path: "products" })
+    let getCategory = await categorylistModel.findById(id)
 
     try {
         if (getCategory) {

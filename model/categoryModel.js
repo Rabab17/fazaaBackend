@@ -12,7 +12,7 @@ let categorySchema = mongoose.Schema({
         type: String,
         required: [true, "ادخل صورة مميزة للفئة"]
     },
-    products: [{ type: mongoose.Schema.ObjectId, ref: "products" }]
+    // products: [{ type: mongoose.Schema.ObjectId, ref: "products" }]
 
 }, { Collection: 'categorey' })
 
