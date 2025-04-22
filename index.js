@@ -33,6 +33,7 @@ let categoryRoute = require('./routes/categoryRoute')
 
 // ------------------- add the all end points -----------------
 app.use("/category", categoryRoute)
+// app.use("/products")
 
 // --------------- response for an end point that is not found in my routes ---------------
 // app.all("*", (req, res, next) => {
