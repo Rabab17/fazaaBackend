@@ -29,10 +29,11 @@ const connect = async () => {
 
 // ------------------- add all routes -------------------------
 let categoryRoute = require('./routes/categoryRoute')
-
+let productsRoute = require('./routes/productsRoute')
 
 // ------------------- add the all end points -----------------
 app.use("/category", categoryRoute)
+app.use("/product", productsRoute)
 
 // --------------- response for an end point that is not found in my routes ---------------
 // app.all("*", (req, res, next) => {
