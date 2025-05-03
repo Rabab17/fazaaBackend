@@ -44,8 +44,10 @@ const productsSchema = mongoose.Schema({
     },
 
     productType: {
+        type: String,
         enum: ["اصلى", "بديل", "تجارى"],
-        required: [true, "ادخل نوع المنتج سواء اصلى او بديل او تجارى"]
+        required: [true, "ادخل نوع المنتج سواء اصلى او بديل او تجارى"],
+        default: 'اصلى'
     },
 
 
